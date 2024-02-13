@@ -8,28 +8,26 @@
     <style>
       h1 {
         text-align: center;
-        line-height: 28px;
+        font-size: 38px;
+        line-height: 48px;
         border: 4px solid #66bfbf;
         border-radius: 4px;
-        margin: 20px 25px;
-        padding: 20px 30px;
+        margin: 15px 0;
+        font-weight: 900;
+        color: #66bfbf;
       }
       h2 {
         text-align: center;
-        margin: 20px 25px;
-        line-height: 18px;
-        padding: 20px 30px;
-      }
-      h3 {
-        text-align: center;
-        color: #66bfbf;
-        font-size: 900;
-      }
+        font-size: 24px;
+        line-height: 27px;
+        font-family: "PT Mono", monospace;
+        margin: 15px 0;
+      }     
       img {
-        display: block;
-        margin: 0 auto;
-        max-width: 70%;
-        padding: 15px 10px;
+        margin: 15px auto;
+        margin-left: 30px;
+        max-width: 85%;
+        border-radius: 12px;
       }
       body {
         background: linear-gradient(
@@ -38,96 +36,73 @@
           rgb(21, 205, 168) 90.6%
         );
       }
-      ul {
-        text-align: center;
-      }
-      li {
-        line-height: 1.5;
-        font-size: 24px;
-      }
-      li::marker {
-        color: #66bfbf;
-      }
-      .dolphin-skills {
-        text-align: center;
-        margin: 20px 0 10px;
-        padding: 20px 30px;
-        border: 4px solid #66bfbf;
-        border-radius: 4px;
-        font-size: 20px;
-      }
-      .footer {
-        text-align: center;
-      }
       .container {
-        max-width: 800px;
+        max-width: 550px;
         margin: 0 auto;
-        padding: 60px;
+        padding: 40px;
         background-color: #eaf6f6;
-      }
+        border-radius: 16px;
+      }    
+      .dolphin-skills {
+        font-size: 18px;
+        line-height: 30px;
+        font-family: "Cerebri Sans";
+      }    
+      
       .btn-discover {
         display: block;
-        margin: 20px auto;
-        border: 4px solid #f76b8a;
-        border-radius: 4px;
-        background: #f76b8a;
-        padding: 15px 20px;
-
-        border-radius: 30px;
+        margin: 30px auto;
+        color: white;
+        width: 90%;  
+        border: none;
+        border-radius: 50px;
+        font-size: 24px;
+        font-family: "Cerebri Sans";
+        font-weight: bold;
+        background:#66bfbf;
+        padding: 15px 20px;       
         transition: all 200ms ease-in-out;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
       }
       .btn-discover:hover {
         opacity: 0.9;
         cursor: pointer;
-        background: #fcfefe;
+       
       }
+      .footer{
+        text-align: center;
+        display: block;
+        font-size: 16px;
+        font-family: "PT Mono", monospace;
+     } 
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>I ❤️ Dolphins 🐬</h1>
-      <h2>If you don't, don't worry. You'll love them soon💞</h2>
-      <p class="dolphin-skills">
-        I was born in Pucallpa, a city located in the eastern part of Peru .<br />
-        Growing up I used to go to the lakeshore to contemplate these wonderful
-        creatures.<br />
-        I remember seeing them jumping and playing around in the water.<br />
-        I also remember a beautiful melody they make.<br />
-        Hearing them always brought me so much peace and warm up my heart🥰.
-      </p>
+      <h1>I Love Dolphins 🐬</h1>
+      <h2>You will fall for them soon 💞</h2>
       <img
         class="dolphin-card"
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/115/037/original/Bottlenose-Dolphin-above-surface.jpg?1707725140"
         alt="dolphin image"
       />
-      <h3>Here are some interesting facts about them:</h3>
-      <ul>
-        <li>
-          <span>
-            They are very intelligent, talented mimics and quick learners
-            🤓.</span
-          >
-        </li>
-        <li>
-          <span>They are highly social, show empathy and emotions 😊.</span>
-        </li>
-        <li><span> They use tools to solve complex tasks⚒️.</span></li>
-      </ul>
+      <p class="dolphin-skills">
+        Growing up I used to go to a lake to contemplate dolphins jumping and
+        playing around in the water. I also remember hearing a beautiful melody
+        when they were around. Hearing them always warmed up my heart🥰.
+        <br />
+        <br />
+        <a
+          href="https://www.dolphinsplus.com/dolphin-facts-everything-you-need-to-know#are_dolphins_fish"
+          > <strong>Learn more</strong>
+        </a>
+        <hr>
+      </p>
       <button class="btn-discover">👉Discover them🐬</button>
-      <p class="footer">Made with ❤️ by Mayte Souza</p>
+      <p ><small class="footer">Made with ❤️ by Mayte Souza</small></p>
     </div>
     <script>
-      function updateDolphinCard(newImg) {
-        let dolphinCard = document.querySelector(".dolphin-card");
-        dolphinCard.innerHTML = ``;
-      }
-
-      function getUserInfo() {
-        let name = prompt("What is your name");
-        let age = prompt("How old are you?");
-      }
-
       function discoverDolphinsNearYou() {
         let name = prompt("What is your name");
         let continent = prompt("In which continent you live in ?");
